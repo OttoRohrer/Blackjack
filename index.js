@@ -6,7 +6,7 @@ function DisplayCard(card) {
 }
 
 function DisplayHand(deck) {
-    const log_deck = [];
+    let log_deck = [];
     deck.forEach((card) => log_deck.push(DisplayCard(card)));
     return log_deck.join(", ");
 }
@@ -119,6 +119,8 @@ function PlayDealerTurns(hand, deck) {
     }
     if (total > 21) {
         console.log(`With a total of ${total}, the Dealer busted. Too bad!`);
+    } else if (total === 21) {
+        console.log("The Dealer hit 21 exactly! Wowza!");
     }
     return [hand, deck];
 }
@@ -138,6 +140,8 @@ async function PlayPlayerTurns(hand, deck) {
     }
     if (total > 21) {
         console.log(`With a total of ${total}, the Player busted. Too bad!`);
+    } else if (total === 21) {
+        console.log("The Player hit 21 exactly! Wowza!");
     }
     return [hand, deck];
 }
