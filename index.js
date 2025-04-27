@@ -4,7 +4,7 @@ import { stdin as input, stdout as output } from "node:process";
 function DisplayCard(card) {
     return card.display;
 }
-
+// Matt smells
 function DisplayHand(deck) {
     let log_deck = [];
     deck.forEach((card) => log_deck.push(DisplayCard(card)));
